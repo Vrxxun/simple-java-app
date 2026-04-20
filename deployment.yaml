@@ -14,5 +14,5 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: varunyadav19/simple-java-app:v1
+          image: varunyadav19/simple-java-app:v2
           imagePullPolicy: Always
