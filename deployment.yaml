@@ -2,8 +2,10 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: java-app-deployment
+  labels:
+    app: java-app
 spec:
-  replicas: 1
+  replicas: 2
   selector:
     matchLabels:
       app: java-app
@@ -14,5 +16,7 @@ spec:
     spec:
       containers:
         - name: java-app
-          image: varunyadav19/simple-java-app:v2
+          image: varunyadav19/simple-java-app:v3
           imagePullPolicy: Always
+          ports:
+            - containerPort: 8080
